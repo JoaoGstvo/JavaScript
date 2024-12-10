@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Bancário</title>
+</head>
+<body>
+    <h1>Sistema Bancário</h1>
+
+    <!-- Menu Principal -->
+    <nav>
+        <button id="btnCriarConta">Criar Conta</button>
+        <button id="btnDepositar">Depositar</button>
+        <button id="btnSacar">Sacar</button>
+        <button id="btnExtrato">Ver Extrato</button>
+        <button id="btnSair">Sair</button>
+    </nav>
+
+    <!-- Seção Criar Conta -->
+    <section id="secaoCriarConta" style="display: none;">
+        <h2>Criar Conta</h2>
+        <form id="formCriarConta">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" required>
+            <button type="submit">Criar Conta</button>
+        </form>
+        <p id="resultadoCriarConta"></p>
+    </section>
+
+    <!-- Seção Depositar -->
+    <section id="secaoDepositar" style="display: none;">
+        <h2>Depositar</h2>
+        <form id="formDepositar">
+            <label for="valorDeposito">Valor:</label>
+            <input type="number" id="valorDeposito" min="1" required>
+            <button type="submit">Depositar</button>
+        </form>
+        <p id="resultadoDeposito"></p>
+    </section>
+
+    <!-- Seção Sacar -->
+    <section id="secaoSacar" style="display: none;">
+        <h2>Sacar</h2>
+        <form id="formSacar">
+            <label for="valorSaque">Valor:</label>
+            <input type="number" id="valorSaque" min="1" required>
+            <button type="submit">Sacar</button>
+        </form>
+        <p id="resultadoSaque"></p>
+    </section>
+
+    <!-- Seção Extrato -->
+    <section id="secaoExtrato" style="display: none;">
+        <h2>Extrato</h2>
+        <div id="listaExtrato"></div>
+    </section>
+
+    <!-- JavaScript básico para alternar entre seções -->
+    <script src="index.js"></script>
+</body>
+</html>
